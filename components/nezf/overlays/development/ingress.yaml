@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nezf
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nezf
+    app.kubernetes.io/part-of: byoc-app-jybo
+  name: nezf
+spec:
+  rules:
+  - host: nezf-byoc-ntao-tenant.apps.108c07fef2170cbe55bf.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: nezf
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
