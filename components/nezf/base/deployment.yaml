@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: nezf
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-ntao-tenant/byoc-app-jybo/nezf@sha256:aea3f4f17e6887445b4c80b0776311bce886dcc2bc12359269248151c54fcc74
         name: my-java-quarkus
         ports:
         - containerPort: 8081
